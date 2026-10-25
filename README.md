@@ -1,5 +1,7 @@
 # header-audit
 
+![testes](https://github.com/BarrinDev/header-audit/actions/workflows/testes.yml/badge.svg)
+
 Script em Python que olha os cabeçalhos de segurança de um site (HSTS, CSP, X-Frame-Options
 e afins) e o certificado TLS, dá uma nota e diz o que falta e como arrumar.
 
@@ -75,7 +77,7 @@ Testes:
 python -m unittest discover -s tests -v
 ```
 
-
+Eles também rodam no GitHub Actions a cada push, em Python 3.10 e 3.12.
 
 ## O que ainda não faz
 
