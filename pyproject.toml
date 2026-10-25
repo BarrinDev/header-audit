@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "header-audit"
+version = "1.0.0"
+description = "Confere os cabeçalhos de segurança HTTP e o certificado TLS de um site."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "BarrinDev" }]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+header-audit = "header_audit.cli:main"
+
+[tool.setuptools]
+packages = ["header_audit"]
