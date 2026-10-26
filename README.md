@@ -39,11 +39,16 @@ Nota F (14/100)
   [FALHA] Content-Security-Policy (CSP): Cabeçalho ausente: nada limita de onde vêm scripts e estilos.
           Como corrigir: Comece por: Content-Security-Policy: default-src 'self'; object-src 'none'; frame-ancestors 'self'
   [FALHA] Proteção contra clickjacking: O site pode ser carregado dentro de um iframe de outro domínio.
+          Como corrigir: Adicione X-Frame-Options: SAMEORIGIN ou a diretiva CSP frame-ancestors 'self'.
   [AVISO] HTTPS: O endereço HTTP responde sem redirecionar para HTTPS.
+          Como corrigir: Configure um redirecionamento 301 de http:// para https://.
   [AVISO] X-Content-Type-Options: O navegador pode adivinhar o tipo do arquivo (MIME sniffing).
+          Como corrigir: Adicione: X-Content-Type-Options: nosniff
   [AVISO] Referrer-Policy: Cabeçalho ausente; vale o padrão do navegador.
+          Como corrigir: Adicione: Referrer-Policy: strict-origin-when-cross-origin
   [INFO ] Permissions-Policy: Cabeçalho ausente; câmera, microfone e localização ficam no padrão.
-  [OK   ] Certificado TLS: Válido por mais 61 dias.
+          Como corrigir: Desligue o que o site não usa, por exemplo: Permissions-Policy: camera=(), microphone=(), geolocation=()
+  [OK   ] Certificado TLS: Válido por mais 60 dias.
   [OK   ] Exposição de versões: Nenhuma versão de software nos cabeçalhos.
 ```
 
